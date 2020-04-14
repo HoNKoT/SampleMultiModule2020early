@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.ui
+package jp.chau2chaun2.honkot.sample.multimodule.ui.adapter
 
 import android.graphics.Bitmap
 import android.view.LayoutInflater
@@ -13,6 +13,7 @@ import jp.chau2chaun2.honkot.sample.multimodule.R
 import jp.chau2chaun2.honkot.sample.multimodule.databinding.RowListQiitaDocBinding
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc
 import jp.chau2chaun2.honkot.sample.multimodule.repository.ImageRepository
+import jp.chau2chaun2.honkot.sample.multimodule.vm.RowListQiitaDocViewModel
 
 class ListQiitaDocAdapter(
     private val viewLifecycleOwner: LifecycleOwner,
@@ -41,7 +42,11 @@ class ListQiitaDocAdapter(
         } ?: run {
             DataBindingUtil.inflate<RowListQiitaDocBinding>(layoutInflater, R.layout.row_list_qiita_doc, null, false).also {
                 it.lifecycleOwner = viewLifecycleOwner
-                it.viewModel = RowListQiitaDocViewModel(imageRepository, item)
+                it.viewModel =
+                    RowListQiitaDocViewModel(
+                        imageRepository,
+                        item
+                    )
             }
         }
         binding.executePendingBindings()

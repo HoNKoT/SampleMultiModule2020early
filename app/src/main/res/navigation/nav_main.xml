@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/selectFragment"
-        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.SelectFragment"
+        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.fragment.SelectFragment"
         android:label="SelectFragment"
         tools:layout="@layout/fragment_select">
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/listAPIFragment"
-        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.ListQiitaDocFragment"
+        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.fragment.ListQiitaDocFragment"
         android:label="ListAPIFragment"
         tools:layout="@layout/fragment_list" />
     <fragment
         android:id="@+id/listDatabaseFragment"
-        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.ListDatabaseFragment"
+        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.fragment.ListDatabaseFragment"
         android:label="ListDatabaseFragment"
         tools:layout="@layout/fragment_list" />
 </navigation>

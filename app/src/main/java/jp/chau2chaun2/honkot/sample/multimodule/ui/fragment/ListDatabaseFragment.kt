@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.ui
+package jp.chau2chaun2.honkot.sample.multimodule.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment
 import jp.chau2chaun2.honkot.sample.multimodule.databinding.FragmentListBinding
+import jp.chau2chaun2.honkot.sample.multimodule.ui.adapter.ListDatabaseAdapter
 import jp.chau2chaun2.honkot.sample.multimodule.vm.ListDatabaseFragmentViewModel
 import javax.inject.Inject
 
@@ -41,12 +42,13 @@ class ListDatabaseFragment : DaggerFragment() {
             (binding.list.adapter as? ListDatabaseAdapter)?.let {
                 it.updateModels(items)
             } ?: run {
-                binding.list.adapter = ListDatabaseAdapter(
-                    viewLifecycleOwner,
-                    layoutInflater,
-                    resources,
-                    items
-                )
+                binding.list.adapter =
+                    ListDatabaseAdapter(
+                        viewLifecycleOwner,
+                        layoutInflater,
+                        resources,
+                        items
+                    )
             }
         })
     }

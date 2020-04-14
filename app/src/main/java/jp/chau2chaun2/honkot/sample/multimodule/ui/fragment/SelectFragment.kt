@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.ui
+package jp.chau2chaun2.honkot.sample.multimodule.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import dagger.android.support.DaggerFragment
 import jp.chau2chaun2.honkot.sample.multimodule.R
+import jp.chau2chaun2.honkot.sample.multimodule.ui.SelectFragmentDirections
 
 class SelectFragment : DaggerFragment() {
 
@@ -21,14 +22,16 @@ class SelectFragment : DaggerFragment() {
 
         view.findViewById<Button>(R.id.useDatabaseButton).apply {
             setOnClickListener {
-                val action = SelectFragmentDirections.actionSelectFragmentToListDatabaseFragment()
+                val action =
+                    SelectFragmentDirections.actionSelectFragmentToListDatabaseFragment()
                 findNavController().navigate(action)
             }
         }
 
         view.findViewById<Button>(R.id.useAPIButton).apply {
             setOnClickListener {
-                val action = SelectFragmentDirections.actionSelectFragmentToListAPIFragment()
+                val action =
+                    SelectFragmentDirections.actionSelectFragmentToListAPIFragment()
                 findNavController().navigate(action)
             }
         }

@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.ui
+package jp.chau2chaun2.honkot.sample.multimodule.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment
 import jp.chau2chaun2.honkot.sample.multimodule.databinding.FragmentListBinding
 import jp.chau2chaun2.honkot.sample.multimodule.repository.ImageRepository
+import jp.chau2chaun2.honkot.sample.multimodule.ui.adapter.ListQiitaDocAdapter
 import jp.chau2chaun2.honkot.sample.multimodule.vm.ListQiitaDocFragmentViewModel
 import javax.inject.Inject
 
@@ -45,12 +46,13 @@ class ListQiitaDocFragment : DaggerFragment() {
             (binding.list.adapter as? ListQiitaDocAdapter)?.let {
                 it.addModels(items)
             } ?: run {
-                binding.list.adapter = ListQiitaDocAdapter(
-                    viewLifecycleOwner,
-                    imageRepository,
-                    layoutInflater,
-                    items
-                )
+                binding.list.adapter =
+                    ListQiitaDocAdapter(
+                        viewLifecycleOwner,
+                        imageRepository,
+                        layoutInflater,
+                        items
+                    )
             }
         })
     }
