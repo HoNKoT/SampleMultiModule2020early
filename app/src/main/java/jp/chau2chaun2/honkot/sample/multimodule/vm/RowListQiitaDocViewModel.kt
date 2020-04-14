@@ -18,9 +18,13 @@ class RowListQiitaDocViewModel(
     val userName: LiveData<String> =
         Transformations.map(data) { "@${it.user.id}" + if (it.user.name?.isNotEmpty() == true) " (${it.user.name})" else "" }
 
-    val loading = MutableLiveData<Boolean>()
+    private var _loading = MutableLiveData<Boolean>()
 
-    val bitmap = MutableLiveData<Bitmap>()
+    val loading: LiveData<Boolean> = _loading
+
+    private var _bitmap = MutableLiveData<Bitmap>()
+
+    val bitmap: LiveData<Bitmap> = _bitmap
 
     init {
         updateModel(qiitaDoc)
@@ -28,10 +32,10 @@ class RowListQiitaDocViewModel(
 
     fun updateModel(qiitaDoc: QiitaDoc) {
         viewModelScope.launch {
-            loading.postValue(true)
+            _loading.postValue(true)
             data.value = qiitaDoc
-            bitmap.value = imageRepository.loadImage(qiitaDoc.user.profileImageUrl ?: "")
-            loading.postValue(false)
+            _bitmap.value = imageRepository.loadImage(qiitaDoc.user.profileImageUrl ?: "")
+            _loading.postValue(false)
         }
     }
 }
