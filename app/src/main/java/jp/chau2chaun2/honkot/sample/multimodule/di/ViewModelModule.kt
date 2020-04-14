@@ -1,10 +1,14 @@
 package jp.chau2chaun2.honkot.sample.multimodule.di
 
 import android.content.Context
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
+import dagger.multibindings.IntoMap
 import jp.chau2chaun2.honkot.sample.multimodule.CustomApplication
+import jp.chau2chaun2.honkot.sample.multimodule.vm.ListAPIFragmentViewModel
+import jp.chau2chaun2.honkot.sample.multimodule.vm.ListDatabaseFragmentViewModel
 
 @Module
 interface ViewModelModule {
@@ -14,4 +18,14 @@ interface ViewModelModule {
 
     @Binds
     fun viewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ListAPIFragmentViewModel::class)
+    fun listAPIFragmentViewModel(viewModel: ListAPIFragmentViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ListDatabaseFragmentViewModel::class)
+    fun listDatabaseFragmentViewModel(viewModel: ListDatabaseFragmentViewModel): ViewModel
 }
