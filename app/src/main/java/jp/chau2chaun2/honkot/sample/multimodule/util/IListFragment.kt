@@ -1,7 +1,7 @@
 package jp.chau2chaun2.honkot.sample.multimodule.util
 
-import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 
 interface IDataLoading {
-    val loading: LiveData<Boolean>
+    val loading: MutableLiveData<Boolean>
 }
