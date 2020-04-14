@@ -11,12 +11,20 @@
         android:label="SelectFragment"
         tools:layout="@layout/fragment_select">
         <action
-            android:id="@+id/action_selectFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            android:id="@+id/action_selectFragment_to_listDatabaseFragment"
+            app:destination="@id/listDatabaseFragment" />
+        <action
+            android:id="@+id/action_selectFragment_to_listAPIFragment"
+            app:destination="@id/listAPIFragment" />
     </fragment>
     <fragment
-        android:id="@+id/listFragment"
-        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.ListFragment"
-        android:label="ListFragment"
-        tools:layout="@layout/fragment_list"/>
+        android:id="@+id/listAPIFragment"
+        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.ListAPIFragment"
+        android:label="ListAPIFragment"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/listDatabaseFragment"
+        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.ListDatabaseFragment"
+        android:label="ListDatabaseFragment"
+        tools:layout="@layout/fragment_list" />
 </navigation>
