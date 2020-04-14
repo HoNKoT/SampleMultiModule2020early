@@ -43,7 +43,7 @@ class ListDatabaseFragment : DaggerFragment() {
             } ?: run {
                 binding.list.adapter = ListDatabaseAdapter(
                     viewLifecycleOwner,
-                    activity!!.layoutInflater,
+                    layoutInflater,
                     resources,
                     items
                 )

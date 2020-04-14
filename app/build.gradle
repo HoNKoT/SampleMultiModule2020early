@@ -97,4 +97,7 @@ dependencies {
 
     // CircleImageView
     implementation 'de.hdodenhof:circleimageview:2.0.0'
+
+    // For Picasso to download and show image from web
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }

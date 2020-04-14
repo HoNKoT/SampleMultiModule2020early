@@ -6,7 +6,6 @@ import jp.chau2chaun2.honkot.sample.multimodule.MainActivity
 
 @Module
 abstract class ActivityModule {
-
     @ContributesAndroidInjector
     abstract fun contributeMainActivity(): MainActivity
 }

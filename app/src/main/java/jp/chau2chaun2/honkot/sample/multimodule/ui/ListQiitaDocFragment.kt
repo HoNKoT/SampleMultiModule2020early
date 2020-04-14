@@ -5,17 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment
 import jp.chau2chaun2.honkot.sample.multimodule.databinding.FragmentListBinding
-import jp.chau2chaun2.honkot.sample.multimodule.vm.ListAPIFragmentViewModel
+import jp.chau2chaun2.honkot.sample.multimodule.repository.ImageRepository
+import jp.chau2chaun2.honkot.sample.multimodule.vm.ListQiitaDocFragmentViewModel
 import javax.inject.Inject
 
-class ListAPIFragment : DaggerFragment() {
+class ListQiitaDocFragment : DaggerFragment() {
     @Inject
     lateinit var vmFactory: ViewModelProvider.Factory
 
-    private val viewModel by viewModels<ListAPIFragmentViewModel> { vmFactory }
+    @Inject
+    lateinit var imageRepository: ImageRepository
+
+    private val viewModel by viewModels<ListQiitaDocFragmentViewModel> { vmFactory }
 
     private lateinit var binding: FragmentListBinding
 
@@ -30,5 +35,23 @@ class ListAPIFragment : DaggerFragment() {
 
         binding.lifecycleOwner = viewLifecycleOwner
         binding.dataLoadingState = viewModel
+        initializeObserver()
+        viewModel.load()
+    }
+
+    private fun initializeObserver() {
+        // 表示情報の更新を検知
+        viewModel.displayItems.observe(viewLifecycleOwner, Observer { items ->
+            (binding.list.adapter as? ListQiitaDocAdapter)?.let {
+                it.addModels(items)
+            } ?: run {
+                binding.list.adapter = ListQiitaDocAdapter(
+                    viewLifecycleOwner,
+                    imageRepository,
+                    layoutInflater,
+                    items
+                )
+            }
+        })
     }
 }
