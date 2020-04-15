@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    implementation project(":data:model")
+    implementation project(':data:model')
     implementation project(":data:repository")
     implementation project(":common:util")
     implementation project(":common:navigation")

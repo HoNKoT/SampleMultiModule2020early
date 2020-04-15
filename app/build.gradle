@@ -51,7 +51,7 @@ kapt {
 
 dependencies {
     implementation project(":data:api")
-    implementation project(":data:model")
+    implementation project(':data:model')
     implementation project(":data:dao")
     implementation project(":data:repository")
     implementation project(":common:util")
