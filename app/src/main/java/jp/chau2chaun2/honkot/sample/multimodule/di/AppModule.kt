@@ -5,11 +5,10 @@ import android.content.res.Resources
 import com.github.gfx.android.orma.AccessThreadConstraint
 import dagger.Module
 import dagger.Provides
-import jp.chau2chaun2.honkot.sample.multimodule.CustomApplication
 import jp.chau2chaun2.honkot.sample.multimodule.data.api.IQiitaService
 import jp.chau2chaun2.honkot.sample.multimodule.data.api_builder.ApiBuilder
 import jp.chau2chaun2.honkot.sample.multimodule.data.api_builder.CustomGsonBuilder
-import jp.chau2chaun2.honkot.sample.multimodule.model.OrmaDatabase
+import jp.chau2chaun2.honkot.sample.multimodule.data.model.OrmaDatabase
 import javax.inject.Singleton
 
 @Module
@@ -22,17 +21,20 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideOrma(app: CustomApplication): OrmaDatabase  {
-        return OrmaDatabase.builder(app.applicationContext)
+    fun provideOrma(context: Context): OrmaDatabase {
+        return OrmaDatabase.builder(context.applicationContext)
             .readOnMainThread(AccessThreadConstraint.NONE)
             .writeOnMainThread(AccessThreadConstraint.NONE)
-            .name("honkot.db")
+            .name("dbName")
             .build()
     }
 
     @Singleton
     @Provides
-    fun provideQiitaService(customGsonBuilder: CustomGsonBuilder): IQiitaService {
-        return ApiBuilder().buildQiitaService("https://qiita.com/", customGsonBuilder.buildGson())
+    fun provideQiitaService(
+        customGsonBuilder: CustomGsonBuilder,
+        apiBuilder: ApiBuilder
+    ): IQiitaService {
+        return apiBuilder.buildQiitaService("https://qiita.com/", customGsonBuilder.buildGson())
     }
 }
