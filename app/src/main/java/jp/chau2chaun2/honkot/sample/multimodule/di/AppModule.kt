@@ -9,7 +9,9 @@ import dagger.Provides
 import jp.chau2chaun2.honkot.sample.multimodule.CustomApplication
 import jp.chau2chaun2.honkot.sample.multimodule.api.IQiitaService
 import jp.chau2chaun2.honkot.sample.multimodule.model.OrmaDatabase
+import jp.chau2chaun2.honkot.sample.multimodule.util.DateTimeUtil
 import okhttp3.OkHttpClient
+import org.threeten.bp.ZonedDateTime
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -33,6 +35,8 @@ class AppModule {
         return GsonBuilder()
             .serializeNulls()
             .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+            .registerTypeAdapter(ZonedDateTime::class.java, DateTimeUtil.DateTimestampSerializer())
+            .registerTypeAdapter(ZonedDateTime::class.java, DateTimeUtil.DateTimestampDeserializer())
             .create()
     }
 
