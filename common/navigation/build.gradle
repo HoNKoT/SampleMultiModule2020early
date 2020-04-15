@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 29
@@ -27,9 +27,6 @@ android {
 }
 
 dependencies {
-    implementation project(":data:model")
-    implementation project(":common:util")
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -38,22 +35,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Network Util
-    debugImplementation 'com.facebook.stetho:stetho:1.5.1'
-    debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
-    debugImplementation 'com.facebook.stetho:stetho-urlconnection:1.5.1'
-    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
-    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
-
-    // Dagger
-    implementation "com.google.dagger:dagger:2.27"
-    annotationProcessor "com.google.dagger:dagger-compiler:2.27"
-    implementation "com.google.dagger:dagger-android:2.26"
-    implementation "com.google.dagger:dagger-android-support:2.26"
-    kapt "com.google.dagger:dagger-compiler:2.27"
-    kapt "com.google.dagger:dagger-android-processor:2.21"
-
-    // threetenabp
-    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.3'
+    // Jetpack
+    implementation "androidx.navigation:navigation-fragment-ktx:2.2.1"
+    implementation "androidx.navigation:navigation-ui-ktx:2.2.1"
 }

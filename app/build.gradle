@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 29
@@ -55,9 +54,11 @@ dependencies {
     implementation project(":data:model")
     implementation project(":data:dao")
     implementation project(":data:repository")
-    implementation project(":util")
+    implementation project(":common:util")
+    implementation project(":common:navigation")
     implementation project(":feature:list_database")
     implementation project(":feature:list_qiita_doc")
+    implementation project(":feature:select")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

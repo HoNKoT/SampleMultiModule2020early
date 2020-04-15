@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 29
@@ -28,7 +29,9 @@ android {
 
 dependencies {
     implementation project(":data:model")
+    implementation project(":data:repository")
     implementation project(":common:util")
+    implementation project(":common:navigation")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -38,13 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Network Util
-    debugImplementation 'com.facebook.stetho:stetho:1.5.1'
-    debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
-    debugImplementation 'com.facebook.stetho:stetho-urlconnection:1.5.1'
-    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
-    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     // Dagger
     implementation "com.google.dagger:dagger:2.27"
@@ -53,6 +50,16 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:2.26"
     kapt "com.google.dagger:dagger-compiler:2.27"
     kapt "com.google.dagger:dagger-android-processor:2.21"
+
+    // Jetpack
+    implementation "androidx.navigation:navigation-fragment-ktx:2.2.1"
+    implementation "androidx.navigation:navigation-ui-ktx:2.2.1"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
+
+    // CircleImageView
+    implementation 'de.hdodenhof:circleimageview:2.0.0'
 
     // threetenabp
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.3'
