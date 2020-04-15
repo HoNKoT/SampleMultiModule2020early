@@ -6,4 +6,4 @@ include ':data:dao'
 include ':data:repository'
 include ':util'
 include ':feature:list_database'
-
+include ':feature:list_qiita_doc'

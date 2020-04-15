@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.vm
+package jp.chau2chaun2.honkot.sample.multimodule.feature.list_qiita_doc
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="jp.chau2chaun2.honkot.sample.multimodule.vm.RowListQiitaDocViewModel" />
+            type="jp.chau2chaun2.honkot.sample.multimodule.feature.list_qiita_doc.RowListQiitaDocViewModel" />
 
         <import type="android.view.View" />
     </data>

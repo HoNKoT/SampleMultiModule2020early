@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/listAPIFragment"
-        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.fragment.ListQiitaDocFragment"
+        android:name="jp.chau2chaun2.honkot.sample.multimodule.feature.list_qiita_doc.ListQiitaDocFragment"
         android:label="ListAPIFragment"
         tools:layout="@layout/fragment_list" />
     <fragment

@@ -1,8 +1,9 @@
-package jp.chau2chaun2.honkot.sample.multimodule.vm
+package jp.chau2chaun2.honkot.sample.multimodule.feature.list_qiita_doc
 
 import android.graphics.Bitmap
 import androidx.lifecycle.*
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc
+import jp.chau2chaun2.honkot.sample.multimodule.util.DateTimeUtil
 import jp.chau2chaun2.honkot.sample.repository.ImageRepository
 import kotlinx.coroutines.launch
 
@@ -17,7 +18,7 @@ class RowListQiitaDocViewModel(
 
     val userName: LiveData<String> = Transformations.map(data) { "@${it.user.id}" }
 
-    val createdAt: LiveData<String> = Transformations.map(data) { jp.chau2chaun2.honkot.sample.multimodule.util.DateTimeUtil.format(it.createdAt) }
+    val createdAt: LiveData<String> = Transformations.map(data) { DateTimeUtil.format(it.createdAt) }
 
     val lgtmCount: LiveData<String> = Transformations.map(data) { it.likesCount.toString() }
 

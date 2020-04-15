@@ -7,8 +7,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import jp.chau2chaun2.honkot.sample.multimodule.CustomApplication
-import jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.ListDatabaseFragmentViewModel
-import jp.chau2chaun2.honkot.sample.multimodule.vm.ListQiitaDocFragmentViewModel
+import jp.chau2chaun2.honkot.sample.multimodule.feature.list_qiita_doc.ListQiitaDocFragmentViewModel
 
 @Module
 interface ViewModelModule {
