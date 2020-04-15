@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.util
+package jp.chau2chaun2.honkot.sample.multimodule.common.laout
 
 import androidx.lifecycle.LiveData
 

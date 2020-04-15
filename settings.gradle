@@ -6,7 +6,7 @@ include ':data:dao'
 include ':data:repository'
 include ':common:util'
 include ':common:navigation'
+include ':common:layout'
 include ':feature:list_database'
 include ':feature:list_qiita_doc'
 include ':feature:select'
-

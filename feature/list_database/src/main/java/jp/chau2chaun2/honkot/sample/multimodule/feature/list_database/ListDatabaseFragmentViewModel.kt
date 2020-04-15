@@ -5,14 +5,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo
-import jp.chau2chaun2.honkot.sample.multimodule.util.IDataLoading
+import jp.chau2chaun2.honkot.sample.multimodule.common.laout.IDataLoading
 import jp.chau2chaun2.honkot.sample.repository.RepoRepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class ListDatabaseFragmentViewModel @Inject constructor(
     private val repoRepository: RepoRepository
-) : IDataLoading, ViewModel() {
+) : jp.chau2chaun2.honkot.sample.multimodule.common.laout.IDataLoading, ViewModel() {
 
     private val _loading = MutableLiveData<Boolean>()
 

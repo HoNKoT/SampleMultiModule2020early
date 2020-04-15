@@ -46,6 +46,7 @@ dependencies {
     implementation project(":data:model")
     implementation project(":data:repository")
     implementation project(":common:util")
+    implementation project(":common:layout")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

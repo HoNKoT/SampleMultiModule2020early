@@ -5,7 +5,7 @@
 
         <variable
             name="dataLoadingState"
-            type="jp.chau2chaun2.honkot.sample.multimodule.util.IDataLoading" />
+            type="jp.chau2chaun2.honkot.sample.multimodule.common.laout.IDataLoading" />
 
         <import type="android.view.View" />
     </data>

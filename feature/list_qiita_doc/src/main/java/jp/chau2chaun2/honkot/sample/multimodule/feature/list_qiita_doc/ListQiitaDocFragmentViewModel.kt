@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class ListQiitaDocFragmentViewModel @Inject constructor(
     private val qiitaDocRepository: QiitaDocRepository
-) : jp.chau2chaun2.honkot.sample.multimodule.util.IDataLoading, ViewModel() {
+) : jp.chau2chaun2.honkot.sample.multimodule.common.laout.IDataLoading, ViewModel() {
     private val _loading = MutableLiveData<Boolean>()
 
     override val loading: LiveData<Boolean> = _loading
