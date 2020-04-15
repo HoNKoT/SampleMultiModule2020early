@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.afri_inc.senri.utils.autoCleared
 import dagger.android.support.DaggerFragment
 import jp.chau2chaun2.honkot.sample.multimodule.databinding.FragmentListBinding
 import jp.chau2chaun2.honkot.sample.multimodule.repository.ImageRepository
@@ -23,7 +24,7 @@ class ListQiitaDocFragment : DaggerFragment() {
 
     private val viewModel by viewModels<ListQiitaDocFragmentViewModel> { vmFactory }
 
-    private lateinit var binding: FragmentListBinding
+    private var binding by autoCleared<FragmentListBinding>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
