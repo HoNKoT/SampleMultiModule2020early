@@ -1,2 +1,4 @@
 rootProject.name='SampleListDataByMultiModule'
 include ':app'
+include ':data:api'
+include ':data:model'

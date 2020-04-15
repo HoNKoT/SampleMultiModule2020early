@@ -1,6 +1,6 @@
 package jp.chau2chaun2.honkot.sample.multimodule.repository
 
-import jp.chau2chaun2.honkot.sample.multimodule.api.IQiitaService
+import jp.chau2chaun2.honkot.sample.multimodule.data.api.IQiitaService
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

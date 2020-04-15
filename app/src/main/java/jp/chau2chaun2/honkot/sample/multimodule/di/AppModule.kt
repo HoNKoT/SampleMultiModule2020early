@@ -9,7 +9,7 @@ import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import jp.chau2chaun2.honkot.sample.multimodule.CustomApplication
-import jp.chau2chaun2.honkot.sample.multimodule.api.IQiitaService
+import jp.chau2chaun2.honkot.sample.multimodule.data.api.IQiitaService
 import jp.chau2chaun2.honkot.sample.multimodule.model.OrmaDatabase
 import jp.chau2chaun2.honkot.sample.multimodule.util.DateTimeUtil
 import okhttp3.OkHttpClient

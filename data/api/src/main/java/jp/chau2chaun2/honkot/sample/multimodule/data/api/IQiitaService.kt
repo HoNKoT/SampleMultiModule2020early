@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.api
+package jp.chau2chaun2.honkot.sample.multimodule.data.api
 
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc
 import retrofit2.Response
