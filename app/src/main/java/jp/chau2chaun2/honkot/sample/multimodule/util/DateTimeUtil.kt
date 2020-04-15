@@ -2,13 +2,16 @@ package jp.chau2chaun2.honkot.sample.multimodule.util
 
 import com.google.gson.*
 import org.threeten.bp.ZonedDateTime
+import org.threeten.bp.format.DateTimeFormatter
 import org.threeten.bp.format.DateTimeParseException
 import java.lang.reflect.Type
 
 object DateTimeUtil {
-    fun parseFrom(value: String): ZonedDateTime = ZonedDateTime.parse(value)
+    private val formatDate = DateTimeFormatter.ofPattern("yyyy/MM/dd")
 
     fun toString(date: ZonedDateTime): String = date.toString()
+
+    fun format(zonedDateTime: ZonedDateTime): String = zonedDateTime.format(formatDate)
 
     class DateTimestampSerializer : JsonSerializer<ZonedDateTime?> {
         override fun serialize(

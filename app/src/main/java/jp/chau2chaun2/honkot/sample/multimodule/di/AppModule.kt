@@ -1,5 +1,7 @@
 package jp.chau2chaun2.honkot.sample.multimodule.di
 
+import android.content.Context
+import android.content.res.Resources
 import com.github.gfx.android.orma.AccessThreadConstraint
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
@@ -18,6 +20,11 @@ import javax.inject.Singleton
 
 @Module
 class AppModule {
+
+    @Provides
+    fun provideResources(context: Context): Resources {
+        return context.resources
+    }
 
     @Singleton
     @Provides

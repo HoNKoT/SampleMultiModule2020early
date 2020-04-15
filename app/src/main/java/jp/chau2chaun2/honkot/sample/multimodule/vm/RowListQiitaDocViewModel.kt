@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import androidx.lifecycle.*
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc
 import jp.chau2chaun2.honkot.sample.multimodule.repository.ImageRepository
+import jp.chau2chaun2.honkot.sample.multimodule.util.DateTimeUtil
 import kotlinx.coroutines.launch
 
 class RowListQiitaDocViewModel(
@@ -13,10 +14,15 @@ class RowListQiitaDocViewModel(
 
     private var data = MutableLiveData<QiitaDoc>()
 
-    val docTitle: LiveData<String> = Transformations.map(data) { "(LGTM: ${it.likesCount}) ${it.title}" }
+    val docTitle: LiveData<String> = Transformations.map(data) { it.title }
 
-    val userName: LiveData<String> =
-        Transformations.map(data) { "@${it.user.id}" + if (it.user.name?.isNotEmpty() == true) " (${it.user.name})" else "" }
+    val userName: LiveData<String> = Transformations.map(data) { "@${it.user.id}" }
+
+    val createdAt: LiveData<String> = Transformations.map(data) { DateTimeUtil.format(it.createdAt) }
+
+    val lgtmCount: LiveData<String> = Transformations.map(data) { it.likesCount.toString() }
+
+    val commentCount: LiveData<String> = Transformations.map(data) { it.commentsCount.toString() }
 
     private var _loading = MutableLiveData<Boolean>()
 
