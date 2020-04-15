@@ -19,7 +19,11 @@ object DateTimeUtil {
             typeOfSrc: Type,
             context: JsonSerializationContext
         ): JsonElement {
-            return JsonPrimitive(toString(src ?: ZonedDateTime.now()))
+            return JsonPrimitive(
+                toString(
+                    src ?: ZonedDateTime.now()
+                )
+            )
         }
     }
 
