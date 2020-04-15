@@ -8,7 +8,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import jp.chau2chaun2.honkot.sample.multimodule.model.Repo
+import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo
 
 class RowListDatabaseViewModel(
     private val resources: Resources,

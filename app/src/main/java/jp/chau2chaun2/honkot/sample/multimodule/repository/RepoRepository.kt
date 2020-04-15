@@ -1,7 +1,7 @@
 package jp.chau2chaun2.honkot.sample.multimodule.repository
 
 import jp.chau2chaun2.honkot.sample.multimodule.dao.RepoDao
-import jp.chau2chaun2.honkot.sample.multimodule.model.Repo
+import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject

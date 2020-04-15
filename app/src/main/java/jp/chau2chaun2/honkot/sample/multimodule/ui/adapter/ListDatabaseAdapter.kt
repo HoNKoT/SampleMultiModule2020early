@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
 import jp.chau2chaun2.honkot.sample.multimodule.R
 import jp.chau2chaun2.honkot.sample.multimodule.databinding.RowListDatabaseBinding
-import jp.chau2chaun2.honkot.sample.multimodule.model.Repo
+import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo
 import jp.chau2chaun2.honkot.sample.multimodule.vm.RowListDatabaseViewModel
 
 class ListDatabaseAdapter(

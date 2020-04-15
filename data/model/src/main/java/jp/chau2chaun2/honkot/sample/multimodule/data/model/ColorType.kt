@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.model
+package jp.chau2chaun2.honkot.sample.multimodule.data.model
 
 import com.github.gfx.android.orma.annotation.StaticTypeAdapter
 import com.github.gfx.android.orma.annotation.StaticTypeAdapters

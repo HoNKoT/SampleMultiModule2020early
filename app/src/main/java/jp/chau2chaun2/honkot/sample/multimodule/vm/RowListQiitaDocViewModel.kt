@@ -18,7 +18,7 @@ class RowListQiitaDocViewModel(
 
     val userName: LiveData<String> = Transformations.map(data) { "@${it.user.id}" }
 
-    val createdAt: LiveData<String> = Transformations.map(data) { DateTimeUtil.format(it.createdAt) }
+    val createdAt: LiveData<String> = Transformations.map(data) { jp.chau2chaun2.honkot.sample.multimodule.util.DateTimeUtil.format(it.createdAt) }
 
     val lgtmCount: LiveData<String> = Transformations.map(data) { it.likesCount.toString() }
 

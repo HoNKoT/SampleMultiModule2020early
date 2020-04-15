@@ -1,8 +1,8 @@
 package jp.chau2chaun2.honkot.sample.multimodule.dao
 
-import jp.chau2chaun2.honkot.sample.multimodule.model.ColorType
+import jp.chau2chaun2.honkot.sample.multimodule.data.model.ColorType
 import jp.chau2chaun2.honkot.sample.multimodule.model.OrmaDatabase
-import jp.chau2chaun2.honkot.sample.multimodule.model.Repo
+import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.random.Random
@@ -27,7 +27,8 @@ class RepoDao @Inject constructor(
         val random = Random(System.currentTimeMillis())
         val colors = ColorType.values()
         IntRange(0, INITIALISE_MODEL_COUNT).forEach { index ->
-            orma.insertIntoRepo(Repo().also {
+            orma.insertIntoRepo(
+                Repo().also {
                 it.index = index
                 it.message = "0x${Integer.toHexString(it.hashCode())}"
                 it.colorType = colors[random.nextInt(0, colors.lastIndex)]
