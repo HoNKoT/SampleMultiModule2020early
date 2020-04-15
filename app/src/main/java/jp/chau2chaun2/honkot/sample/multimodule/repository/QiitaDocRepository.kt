@@ -16,7 +16,6 @@ class QiitaDocRepository @Inject constructor(
      */
     suspend fun getQiitaDocs(): List<QiitaDoc> = withContext(Dispatchers.IO) {
         qiitaService.items(page = 1, perPage = 100)
-            .execute()
             .takeIf { it.isSuccessful }?.body() ?: ArrayList()
     }
 }

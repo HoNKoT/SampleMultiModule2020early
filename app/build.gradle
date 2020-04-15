@@ -16,6 +16,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -100,4 +102,7 @@ dependencies {
 
     // For Picasso to download and show image from web
     implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    // threetenabp
+    compile 'com.jakewharton.threetenabp:threetenabp:1.2.3'
 }

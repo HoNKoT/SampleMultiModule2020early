@@ -8,7 +8,6 @@ import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import dagger.android.support.DaggerFragment
 import jp.chau2chaun2.honkot.sample.multimodule.R
-import jp.chau2chaun2.honkot.sample.multimodule.ui.SelectFragmentDirections
 
 class SelectFragment : DaggerFragment() {
 
