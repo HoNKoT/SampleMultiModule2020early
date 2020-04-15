@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.vm
+package jp.chau2chaun2.honkot.sample.multimodule.feature.list_database
 
 import android.content.res.Resources
 import android.graphics.drawable.ColorDrawable

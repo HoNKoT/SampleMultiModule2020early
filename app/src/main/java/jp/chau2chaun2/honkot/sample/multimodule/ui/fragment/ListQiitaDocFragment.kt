@@ -9,10 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.afri_inc.senri.utils.autoCleared
 import dagger.android.support.DaggerFragment
-import jp.chau2chaun2.honkot.sample.multimodule.databinding.FragmentListBinding
-import jp.chau2chaun2.honkot.sample.repository.ImageRepository
+import jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.databinding.FragmentListBinding
 import jp.chau2chaun2.honkot.sample.multimodule.ui.adapter.ListQiitaDocAdapter
 import jp.chau2chaun2.honkot.sample.multimodule.vm.ListQiitaDocFragmentViewModel
+import jp.chau2chaun2.honkot.sample.repository.ImageRepository
 import javax.inject.Inject
 
 class ListQiitaDocFragment : DaggerFragment() {

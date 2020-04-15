@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_list" />
     <fragment
         android:id="@+id/listDatabaseFragment"
-        android:name="jp.chau2chaun2.honkot.sample.multimodule.ui.fragment.ListDatabaseFragment"
+        android:name="jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.ListDatabaseFragment"
         android:label="ListDatabaseFragment"
         tools:layout="@layout/fragment_list" />
 </navigation>

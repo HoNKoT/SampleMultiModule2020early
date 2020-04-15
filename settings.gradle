@@ -5,3 +5,5 @@ include ':data:model'
 include ':data:dao'
 include ':data:repository'
 include ':util'
+include ':feature:list_database'
+

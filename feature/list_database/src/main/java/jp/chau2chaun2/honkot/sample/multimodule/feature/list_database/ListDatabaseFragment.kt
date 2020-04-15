@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.ui.fragment
+package jp.chau2chaun2.honkot.sample.multimodule.feature.list_database
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.afri_inc.senri.utils.autoCleared
 import dagger.android.support.DaggerFragment
-import jp.chau2chaun2.honkot.sample.multimodule.databinding.FragmentListBinding
-import jp.chau2chaun2.honkot.sample.multimodule.ui.adapter.ListDatabaseAdapter
-import jp.chau2chaun2.honkot.sample.multimodule.vm.ListDatabaseFragmentViewModel
+import jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.databinding.FragmentListBinding
 import javax.inject.Inject
 
 class ListDatabaseFragment : DaggerFragment() {

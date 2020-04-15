@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="jp.chau2chaun2.honkot.sample.multimodule.vm.RowListDatabaseViewModel" />
+            type="jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.RowListDatabaseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

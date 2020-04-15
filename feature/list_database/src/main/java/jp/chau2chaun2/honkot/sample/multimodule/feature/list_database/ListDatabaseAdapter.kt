@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.ui.adapter
+package jp.chau2chaun2.honkot.sample.multimodule.feature.list_database
 
 import android.content.res.Resources
 import android.view.LayoutInflater
@@ -7,10 +7,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
-import jp.chau2chaun2.honkot.sample.multimodule.R
-import jp.chau2chaun2.honkot.sample.multimodule.databinding.RowListDatabaseBinding
 import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo
-import jp.chau2chaun2.honkot.sample.multimodule.vm.RowListDatabaseViewModel
+import jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.databinding.RowListDatabaseBinding
 
 class ListDatabaseAdapter(
     private val viewLifecycleOwner: LifecycleOwner,

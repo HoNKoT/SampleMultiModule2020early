@@ -1,17 +1,18 @@
-package jp.chau2chaun2.honkot.sample.multimodule.vm
+package jp.chau2chaun2.honkot.sample.multimodule.feature.list_database
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo
+import jp.chau2chaun2.honkot.sample.multimodule.util.IDataLoading
 import jp.chau2chaun2.honkot.sample.repository.RepoRepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class ListDatabaseFragmentViewModel @Inject constructor(
     private val repoRepository: RepoRepository
-) : jp.chau2chaun2.honkot.sample.multimodule.util.IDataLoading, ViewModel() {
+) : IDataLoading, ViewModel() {
 
     private val _loading = MutableLiveData<Boolean>()
 
