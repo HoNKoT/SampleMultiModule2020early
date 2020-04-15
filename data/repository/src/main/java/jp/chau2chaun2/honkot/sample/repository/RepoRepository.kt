@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.repository
+package jp.chau2chaun2.honkot.sample.repository
 
 import jp.chau2chaun2.honkot.sample.multimodule.data.dao.RepoDao
 import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo

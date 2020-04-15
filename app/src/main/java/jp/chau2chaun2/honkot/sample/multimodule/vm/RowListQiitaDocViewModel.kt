@@ -3,8 +3,7 @@ package jp.chau2chaun2.honkot.sample.multimodule.vm
 import android.graphics.Bitmap
 import androidx.lifecycle.*
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc
-import jp.chau2chaun2.honkot.sample.multimodule.repository.ImageRepository
-import jp.chau2chaun2.honkot.sample.multimodule.util.DateTimeUtil
+import jp.chau2chaun2.honkot.sample.repository.ImageRepository
 import kotlinx.coroutines.launch
 
 class RowListQiitaDocViewModel(

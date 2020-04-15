@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import jp.chau2chaun2.honkot.sample.multimodule.data.model.Repo
-import jp.chau2chaun2.honkot.sample.multimodule.repository.RepoRepository
+import jp.chau2chaun2.honkot.sample.repository.RepoRepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

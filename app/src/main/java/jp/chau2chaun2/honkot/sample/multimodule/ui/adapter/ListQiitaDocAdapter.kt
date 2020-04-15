@@ -12,7 +12,7 @@ import androidx.lifecycle.LifecycleOwner
 import jp.chau2chaun2.honkot.sample.multimodule.R
 import jp.chau2chaun2.honkot.sample.multimodule.databinding.RowListQiitaDocBinding
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc
-import jp.chau2chaun2.honkot.sample.multimodule.repository.ImageRepository
+import jp.chau2chaun2.honkot.sample.repository.ImageRepository
 import jp.chau2chaun2.honkot.sample.multimodule.vm.RowListQiitaDocViewModel
 
 class ListQiitaDocAdapter(

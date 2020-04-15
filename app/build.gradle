@@ -54,6 +54,7 @@ dependencies {
     implementation project(":data:api")
     implementation project(":data:model")
     implementation project(":data:dao")
+    implementation project(":data:repository")
     implementation project(":util")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])

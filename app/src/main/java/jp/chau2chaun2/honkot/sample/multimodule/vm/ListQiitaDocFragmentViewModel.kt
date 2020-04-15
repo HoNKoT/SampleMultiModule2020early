@@ -5,8 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc
-import jp.chau2chaun2.honkot.sample.multimodule.repository.QiitaDocRepository
-import jp.chau2chaun2.honkot.sample.multimodule.util.IDataLoading
+import jp.chau2chaun2.honkot.sample.repository.QiitaDocRepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

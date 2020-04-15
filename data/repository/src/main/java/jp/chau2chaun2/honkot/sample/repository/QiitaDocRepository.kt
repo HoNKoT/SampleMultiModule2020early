@@ -1,4 +1,4 @@
-package jp.chau2chaun2.honkot.sample.multimodule.repository
+package jp.chau2chaun2.honkot.sample.repository
 
 import jp.chau2chaun2.honkot.sample.multimodule.data.api.IQiitaService
 import jp.chau2chaun2.honkot.sample.multimodule.model.QiitaDoc

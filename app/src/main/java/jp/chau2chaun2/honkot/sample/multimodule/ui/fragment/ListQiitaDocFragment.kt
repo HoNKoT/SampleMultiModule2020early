@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.afri_inc.senri.utils.autoCleared
 import dagger.android.support.DaggerFragment
 import jp.chau2chaun2.honkot.sample.multimodule.databinding.FragmentListBinding
-import jp.chau2chaun2.honkot.sample.multimodule.repository.ImageRepository
+import jp.chau2chaun2.honkot.sample.repository.ImageRepository
 import jp.chau2chaun2.honkot.sample.multimodule.ui.adapter.ListQiitaDocAdapter
 import jp.chau2chaun2.honkot.sample.multimodule.vm.ListQiitaDocFragmentViewModel
 import javax.inject.Inject
