@@ -2,9 +2,8 @@ package jp.chau2chaun2.honkot.sample.multimodule.di
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
-import jp.chau2chaun2.honkot.sample.multimodule.ui.fragment.ListQiitaDocFragment
-import jp.chau2chaun2.honkot.sample.multimodule.ui.fragment.ListDatabaseFragment
-import jp.chau2chaun2.honkot.sample.multimodule.ui.fragment.SelectFragment
+import jp.chau2chaun2.honkot.sample.multimodule.feature.list_qiita_doc.ListQiitaDocFragment
+import jp.chau2chaun2.honkot.sample.multimodule.feature.select.SelectFragment
 
 @Module
 abstract class FragmentModule {
@@ -16,5 +15,5 @@ abstract class FragmentModule {
     abstract fun contributeListAPIFragment(): ListQiitaDocFragment
 
     @ContributesAndroidInjector
-    abstract fun contributeListDatabaseFragment(): ListDatabaseFragment
+    abstract fun contributeListDatabaseFragment(): jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.ListDatabaseFragment
 }

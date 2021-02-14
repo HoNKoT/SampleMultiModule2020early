@@ -7,8 +7,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import jp.chau2chaun2.honkot.sample.multimodule.CustomApplication
-import jp.chau2chaun2.honkot.sample.multimodule.vm.ListDatabaseFragmentViewModel
-import jp.chau2chaun2.honkot.sample.multimodule.vm.ListQiitaDocFragmentViewModel
+import jp.chau2chaun2.honkot.sample.multimodule.feature.list_qiita_doc.ListQiitaDocFragmentViewModel
 
 @Module
 interface ViewModelModule {
@@ -26,6 +25,6 @@ interface ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(ListDatabaseFragmentViewModel::class)
-    fun listDatabaseFragmentViewModel(viewModel: ListDatabaseFragmentViewModel): ViewModel
+    @ViewModelKey(jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.ListDatabaseFragmentViewModel::class)
+    fun listDatabaseFragmentViewModel(viewModel: jp.chau2chaun2.honkot.sample.multimodule.feature.list_database.ListDatabaseFragmentViewModel): ViewModel
 }

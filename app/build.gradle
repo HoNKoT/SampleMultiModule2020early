@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 29
@@ -51,6 +50,17 @@ kapt {
 }
 
 dependencies {
+    implementation project(":data:api")
+    implementation project(':data:model')
+    implementation project(":data:dao")
+    implementation project(":data:repository")
+    implementation project(":common:util")
+    implementation project(":common:navigation")
+    implementation project(":common:layout")
+    implementation project(":feature:list_database")
+    implementation project(":feature:list_qiita_doc")
+    implementation project(":feature:select")
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -104,5 +114,5 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     // threetenabp
-    compile 'com.jakewharton.threetenabp:threetenabp:1.2.3'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.3'
 }
